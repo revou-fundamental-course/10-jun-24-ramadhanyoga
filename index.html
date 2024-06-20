@@ -3,18 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator Konversi Suhu</title>
-    <link rel="stylesheet" href="style.css">
+    <title> Konversi Suhu </title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <h1>Kalkulator Konversi Suhu</h1>
+        <p>Masukkan suhu derajat Celcius (&deg;C) ke kotak di bawah, lalu klik tombol konversi untuk mendapatkan hasil konversi</p>
     </header>
-    
-    <main></main>
-    <footer></footer>
 
+    <!--start content-->
+    <main>
+        <!--Section Celcius-->
+        <section class="content-center">
+            <form action="javascript:void(0)" onsubmit="formSubmit(this)" id="form">
+                <label>Celcius</label>
+                <input type="number" name="input" id="input" placeholder="masukkan Suhu">
+                <section>
+                    <button type="submit">konversi</button>
+                    <button type="reset">reset</button>
+                    <button type="button" onclick="reverseSuhu(this)">reverse</button>
+                </section>
+            
+                <section class="content-center">
+                    <span id="convert">Fahrenheit</span>
+                    <input readonly type="number" id="result" name="Fahrenheit">
+                </section>
+            
+                <section class="content-center">
+                    <span>Cara kalkulasi</span>
+                    <input readonly type="text" id="rumus">
+                </section>
+            </form>
+        </section>
+    <!-- end section -->
 
-    <script src="script.js"></script>
+    </main>
+    <script src="js/script.js"></script>
 </body>
 </html>
